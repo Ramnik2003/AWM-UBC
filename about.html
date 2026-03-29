@@ -5,11 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About | AWM @ UBC</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="animations.css">
 
   <style>
-    /* about page only */
-
+  
     .about-intro {
       padding: 90px 5%;
       background: var(--warm-white);
@@ -21,7 +20,11 @@
       margin-right: auto;
     }
 
-    .goals-section { padding: 90px 5%; background: var(--light-lilac); }
+    .goals-section { 
+        padding: 90px 5%;
+         background: var(--light-lilac);
+    }
+
     .goals-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -31,6 +34,8 @@
       margin-left: auto;
       margin-right: auto;
     }
+
+
     .goal-card {
       background: #fff;
       border-radius: 14px;
@@ -38,11 +43,23 @@
       border-left: 4px solid var(--royal-purple);
       box-shadow: 0 2px 12px rgba(75,31,95,.06);
     }
-    .goal-card h3 { margin-bottom: 8px; }
-    .goal-card p  { font-size: 0.88rem; }
 
-    .who-section { padding: 90px 5%; background: var(--warm-white); }
-    .who-section .container { max-width: 900px; }
+    .goal-card h3 { 
+        margin-bottom: 8px; 
+    }
+
+    .goal-card p  {
+         font-size: 0.88rem; 
+    }
+
+    .who-section { 
+        padding: 90px 5%; 
+        background: var(--warm-white); 
+    }
+    .who-section .container { 
+        max-width: 900px; 
+    }
+
   </style>
 </head>
 <body>
@@ -56,6 +73,7 @@
 
 <section class="about-intro">
 
+    <!-- Refernce: Base44 prototype shared by Firila -->
   <div class="two-col">
     <div class="reveal">
       <h2>Who We Are</h2>
@@ -82,6 +100,7 @@
     </div>
   </div>
 
+  <!-- Reference: Base44 prototype shared by Firila: https://math-link-bloom.base44.app/about -->
   <div class="two-col" style="margin-top: 0;">
     <div class="highlight-box reveal delay-1" style="margin-top: 0;">
       <h3 style="margin-bottom: 10px;">Why This Chapter Exists</h3>
@@ -104,28 +123,22 @@
 
   <div class="goals-grid">
     <div class="goal-card reveal delay-1">
+    <!-- Refernce: Base 44 prototype: https://math-link-bloom.base44.app/about -->
       <h3>Community</h3>
-      <p>Create a welcoming, inclusive space where every member feels seen, heard, and valued.</p>
+      <p>Create a welcoming, inclusive space where women in mathematics feels seen, heard, and valued.</p>
     </div>
     <div class="goal-card reveal delay-2">
       <h3>Mentorship</h3>
-      <p>Connect students across year levels so knowledge, experience, and encouragement flow freely.</p>
+      <p>Connect students across all year levels through structured mentorship programs and peer support.</p>
     </div>
     <div class="goal-card reveal delay-3">
       <h3>Career Development</h3>
       <p>Expose members to diverse career paths through panels, workshops, and industry connections.</p>
     </div>
-    <div class="goal-card reveal delay-1">
-      <h3>Research Awareness</h3>
-      <p>Highlight research opportunities and make the world of mathematical research accessible to all students.</p>
-    </div>
-    <div class="goal-card reveal delay-2">
-      <h3>Visibility</h3>
-      <p>Amplify the voices and achievements of women in mathematics at UBC and beyond.</p>
-    </div>
+    
     <div class="goal-card reveal delay-3">
       <h3>Belonging</h3>
-      <p>Challenge the culture of isolation in mathematics and build spaces of genuine belonging.</p>
+      <p>To build spaces of genuine belonging and break isolation.</p>
     </div>
   </div>
 </section>
@@ -138,69 +151,11 @@
   </div>
 </section>
 
-<footer class="site-footer">
-  <div class="footer-grid">
-
-    <div class="footer-brand">
-      <div class="logo-text">AWM @ UBC</div>
-      <div class="logo-text para">
-        <p>Fostering community, mentorship, and opportunity for women and gender minorities in mathematics at UBC.</p>
-      </div>
-    </div>
-
-    <div class="footer-col">
-      <h4>Navigate</h4>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="team.html">Team</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="mentorship.html">Mentorship</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-col">
-      <h4>More</h4>
-      <ul>
-        <li><a href="membership.html">Get Involved</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="partners.html">Partners</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-col">
-      <h4>Connect</h4>
-      <div class="social-links">
-        <a href="#" title="Instagram">Instagram</a>
-        <a href="#" title="LinkedIn">LinkedIn</a>
-        <a href="mailto:awm@ubc.ca" title="Email">Email</a>
-      </div>
-      <p style="margin-top: 14px;">awm@ubc.ca<br>UBC Vancouver Campus</p>
-    </div>
-
-  </div>
-  <div class="footer-bottom">
-    <p>© 2026 Association for Women in Mathematics at UBC. All rights reserved.</p>
-  </div>
-</footer>
+<div id="footer-placeholder"></div>
 
 <script src="nav.js"></script>
-<script>
-  //code from AI - Used Claude - prompt:"Help me add "Airy" feature to my website"
-  (function() {
-    var els = document.querySelectorAll('.reveal');
-    var observer = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    els.forEach(function(el) { observer.observe(el); });
-  })();
-</script>
+<script src="footer.js"></script>
+<script src="animations.js"></script>
+
 </body>
 </html>
