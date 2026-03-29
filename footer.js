@@ -2,9 +2,7 @@
 
   /* ── Detect base path (same logic as nav.js) ─────────────────────────────
      Works for both GitHub Pages subfolders and custom domains.             */
-  var pathParts = location.pathname.split('/');
-  pathParts.pop();
-  var basePath = pathParts.join('/') + '/';
+  var basePath = '/AWM-UBC/';
 
   function href(page) {
     return basePath + page;
