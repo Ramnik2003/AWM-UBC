@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team | AWM @ UBC</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="animations.css">
+
+  <!-- Reference: design inspired from Base 44 prototype: https://math-link-bloom.base44.app/team -->
+  <style>
+
+    .team-section {
+      padding: 80px 5%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .section-divider .line {
+      width: 48px;
+      height: 1.5px;
+      background: var(--muted-rose);
+      opacity: 0.6;
+    }
+
+    .section-divider .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--muted-rose);
+    }
+
+    .dept-block {
+      margin-bottom: 70px;
+    }
+
+    .dept-block .dept-header {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .dept-block .dept-header h2 {
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      color: var(--deep-plum);
+      margin-bottom: 6px;
+    }
+
+    .dept-block .dept-header .sub-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--royal-purple);
+    }
+
+    .president-row {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 70px;
+    }
+
+    .president-card-wrap {
+      text-align: center;
+      max-width: 220px;
+    }
+
+    .president-card-wrap .teamMember-img,
+    .member-card .teamMember-img {
+        width: 110px;
+        height: 110px;
+        border-radius: 50%; 
+
+        background: linear-gradient(135deg, var(--soft-lavender), var(--muted-rose));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+  
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: var(--deep-plum);
+  
+        margin: 0 auto 14px;
+        border: 3px solid rgba(205, 183, 233, 0.5);
+  
+        overflow: hidden; 
+        position: relative;
+    }
+
+    .president-card-wrap .teamMember-img img,
+    .member-card .teamMember-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+        display: block;
+    }
+
+ 
+
+    .president-card-wrap h3 {
+      font-size: 1.1rem;
+      color: var(--deep-plum);
+      margin-bottom: 4px;
+    }
+
+    .president-card-wrap .role {
+      font-size: 0.82rem;
+      color: var(--royal-purple);
+      font-weight: 600;
+    }
+
+    .members-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+      gap: 20px;
+    }
+
+    .member-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 24px 18px;
+      text-align: center;
+      border: 1px solid rgba(205, 183, 233, 0.3);
+      box-shadow: 0 2px 12px rgba(75, 31, 95, 0.07);
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .member-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(75, 31, 95, 0.14);
+    }
+
+    .member-card.vp {
+      background: linear-gradient(135deg, var(--light-lilac), #efe8f9);
+      border-color: rgba(109, 63, 169, 0.2);
+    }
+
+    .member-card h3 {
+      font-size: 0.97rem;
+      color: var(--deep-plum);
+      margin-bottom: 4px;
+    }
+
+    .member-card .role {
+      font-size: 0.78rem;
+      color: var(--royal-purple);
+      font-weight: 600;
+    }
+
+    @media (max-width: 600px) {
+      .members-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 400px) {
+      .members-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+
+<div class="page-hero">
+  <h1>Our <em>Team</em></h1>
+  <p>Meet the dedicated individuals who lead our community forward.</p>
+</div>
+
+
+<section class="team-section">
+  <div class="dept-block reveal">
+    <div class="dept-header">
+      <div class="section-divider">
+        <div class="line"></div>
+        <div class="dot"></div>
+        <div class="line"></div>
+      </div>
+      <h2>Executive Board</h2>
+      <span class="sub-label">Leadership</span>
+    </div>
+
+    <div class="president-row">
+      <div class="president-card-wrap">
+        <div class="teamMember-img">
+            <img src="images/teamPlaceholder.png" alt="President">
+          </div>        
+          <h3>Ava Ahmadi</h3>
+        <div class="role">Founder &amp; President</div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="dept-block reveal">
+    <div class="dept-header">
+      <div class="section-divider">
+        <div class="line"></div>
+        <div class="dot"></div>
+        <div class="line"></div>
+      </div>
+      <h2>Communications &amp; Media</h2>
+      <span class="sub-label">Outreach &amp; Promotion</span>
+    </div>
+
+    <div class="members-grid">
+      <div class="member-card vp">
+        <div class="teamMember-img">
+            <img src="images/teamPlaceholder.png" alt="Media">
+          </div>
+          <h3>Emily Lu</h3>
+        <div class="role">VP Communications &amp; Media</div>
+      </div>
+      <div class="member-card">
+        <div class="teamMember-img">
+            <img src="images/teamPlaceholder.png" alt="MediaCoordinator">
+          </div>
+        <h3>Muslima Akhatkulova</h3>
+        <div class="role">Communications &amp; Media Coordinator</div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="dept-block reveal">
+    <div class="dept-header">
+      <div class="section-divider">
+        <div class="line"></div>
+        <div class="dot"></div>
+        <div class="line"></div>
+      </div>
+      <h2>Events</h2>
+      <span class="sub-label">Planning &amp; Execution</span>
+    </div>
+
+    <div class="members-grid">
+      <div class="member-card vp">
+        <div class="teamMember-img">
+            <img src="images/teamPlaceholder.png" alt="VPEvents">
+          </div>
+        <h3>Sarah Porcheron</h3>
+        <div class="role">VP Events</div>
+      </div>
+      <div class="member-card">
+        <div class="teamMember-img">
+            <img src="images/teamPlaceholder.png" alt="EventsCoordinator">
+          </div>
+        <h3>Alexandra Wong</h3>
+        <div class="role">Events Coordinator</div>
+      </div>
+      <div class="member-card">
+        <div class="teamMember-img">
+            <img src="images/teamPlaceholder.png" alt="EventsCoordinator">
+          </div>        
+          <h3>Alexandra Huang</h3>
+        <div class="role">Events Coordinator</div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="dept-block reveal">
+    <div class="dept-header">
+      <div class="section-divider">
+        <div class="line"></div>
+        <div class="dot"></div>
+        <div class="line"></div>
+      </div>
+      <h2>External Relations</h2>
+      <span class="sub-label">Partnerships &amp; Outreach</span>
+    </div>
+
+    <div class="members-grid">
+      <div class="member-card vp">
+        <div class="teamMember-img">
+            <img src="images/teamPlaceholder.png" alt="VPExternalRelations">
+          </div>        
+          <h3>Anneke Jocelyn Hermawan</h3>
+        <div class="role">VP External Relations</div>
+      </div>
+      <div class="member-card">
+        <div class="teamMember-img">
+            <img src="images/teamPlaceholder.png" alt="ExternalRelationsCoordinator">
+          </div>        
+          <h3>Trinity Vanderkooi</h3>
+        <div class="role">External Relations Coordinator</div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="dept-block reveal">
+    <div class="dept-header">
+      <div class="section-divider">
+        <div class="line"></div>
+        <div class="dot"></div>
+        <div class="line"></div>
+      </div>
+      <h2>Finance</h2>
+      <span class="sub-label">Budget &amp; Funding</span>
+    </div>
+
+    <div class="members-grid">
+      <div class="member-card vp">
+        <div class="teamMember-img">
+            <img src="images/teamPlaceholder.png" alt="VPFinance">
+          </div>        
+          <h3>Gurleen Rao</h3>
+        <div class="role">VP Finance</div>
+      </div>
+      <div class="member-card">
+        <div class="teamMember-img">
+            <img src="images/teamPlaceholder.png" alt="FinanceCoordinator">
+          </div>        
+          <h3>Negar Bayat</h3>
+        <div class="role">Finance Coordinator</div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="dept-block reveal">
+    <div class="dept-header">
+      <div class="section-divider">
+        <div class="line"></div>
+        <div class="dot"></div>
+        <div class="line"></div>
+      </div>
+      <h2>Mentorship &amp; Community</h2>
+      <span class="sub-label">Support &amp; Connection</span>
+    </div>
+
+    <div class="members-grid">
+      <div class="member-card vp">
+        <div class="teamMember-img">
+            <img src="images/teamPlaceholder.png" alt="Community">
+          </div>        
+          <h3>Catherine Gadalova</h3>
+        <div class="role">VP Mentorship &amp; Community</div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="dept-block reveal">
+    <div class="dept-header">
+      <div class="section-divider">
+        <div class="line"></div>
+        <div class="dot"></div>
+        <div class="line"></div>
+      </div>
+      <h2>Operations</h2>
+      <span class="sub-label">Administration &amp; Logistics</span>
+    </div>
+
+    <div class="members-grid">
+      <div class="member-card">
+        <div class="teamMember-img">
+            <img src="images/teamPlaceholder.png" alt="Operations">
+          </div>        
+          <h3>Nandini Rana</h3>
+        <div class="role">Operations</div>
+      </div>
+      <div class="member-card">
+        <div class="teamMember-img">
+            <img src="images/teamPlaceholder.png" alt="OperationsSecratory">
+          </div>        
+          <h3>Kayla Zhang</h3>
+        <div class="role">Operations Secretary</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dept-block reveal">
+    <div class="dept-header">
+      <div class="section-divider">
+        <div class="line"></div>
+        <div class="dot"></div>
+        <div class="line"></div>
+      </div>
+      <h2>Tech &amp; Web</h2>
+      <span class="sub-label">Website &amp; Design</span>
+    </div>
+
+    <div class="members-grid">
+      <div class="member-card">
+        <div class="teamMember-img">
+            <img src="images/teamPlaceholder.png" alt="Tech/Web">
+          </div>        
+          <h3>Ramnik Kaur Sidhu</h3>
+        <div class="role">Tech / Web</div>
+      </div>
+      <div class="member-card">
+        <div class="teamMember-img">
+            <img src="images/teamPlaceholder.png" alt="UI/UX">
+          </div>       
+        <h3>Firila Najma Wahidah</h3>
+        <div class="role">UI / UX</div>
+      </div>
+    </div>
+  </div>
+
+
+</section>
+
+
+<div id="footer-placeholder"></div>
+
+<script src="nav.js"></script>
+<script src="footer.js"></script>
+<script src="animations.js"></script>
+
+</body>
+</html>
