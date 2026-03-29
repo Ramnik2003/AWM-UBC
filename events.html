@@ -66,6 +66,79 @@
         margin-bottom: 36px; 
         max-width: 600px; 
     }
+    
+
+    .event-card {
+        background: #fff;
+        border-radius: 14px;
+        overflow: hidden;
+        border: 1px solid rgba(205,183,233,.3);
+        box-shadow: 0 2px 12px rgba(75,31,95,.08);
+        display: flex; flex-direction: column;
+        transition: transform .25s, box-shadow .25s;
+    }
+    .event-card:hover { 
+        transform: translateY(-5px);
+         box-shadow: 0 10px 28px rgba(75,31,95,.14);
+     }
+
+     .event-card.past {
+
+        width:auto;
+     }
+    .event-img {
+         height: 180px; overflow: hidden;
+         background: linear-gradient(135deg, var(--soft-lavender), var(--muted-rose));
+         display: flex; align-items: center; justify-content: center;
+         font-size: 3rem;
+    }
+    .event-img img { 
+        width: 100%; 
+        height: 100%; 
+        object-fit: cover; 
+    }
+    .event-body { 
+        padding: 20px; 
+        flex: 1; 
+        display: flex; 
+        flex-direction: column; 
+    }
+    .event-meta { 
+        display: flex; 
+        gap: 12px; 
+        margin-bottom: 10px; 
+        flex-wrap: wrap; 
+    }
+
+    .event-tag {
+        background: var(--light-lilac); 
+        color: var(--royal-purple);
+        padding: 3px 10px; border-radius: 12px;
+        font-size: 0.76rem; font-weight: 600;
+    }
+
+    .event-body h3 { 
+        margin-bottom: 6px; 
+    }
+
+    .event-body p { 
+        font-size: 0.88rem; flex: 1; 
+    }
+
+    .event-footer { 
+        margin-top: 16px; 
+        display: flex; 
+        align-items: center; 
+        justify-content: space-between; 
+        flex-wrap: wrap; 
+        gap: 8px; 
+    }
+    .event-date { 
+        font-size: 0.82rem; 
+        color: #888; 
+    }
+  
+
 
     #section-past {
       background: var(--light-lilac);
@@ -226,7 +299,7 @@
       <div class="divider divider-left"></div>
       <p>A look back at some of the things we have done.</p>
 
-      <div class="card-grid">
+      <div class="card-grid past">
 
         <div class="event-card reveal delay-1">
           <div class="event-img">
