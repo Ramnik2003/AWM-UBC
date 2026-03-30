@@ -1,6 +1,4 @@
-/* AWM @ UBC — main stylesheet
-   colours, nav, footer, reusable components
-   page-specific stuff lives in each html file's <style> block */
+
 
    :root {
     --deep-plum:    #4B1F5F;
@@ -13,7 +11,6 @@
     --nav-height:   85px;
   }
   
-  /* reset */
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   
@@ -25,24 +22,61 @@
     padding-top: var(--nav-height);
   }
   
-  /* typography */
+
   h1, h2, h3, h4 {
     font-family: 'Cormorant Garamond', Georgia, serif;
     color: var(--deep-plum);
     line-height: 1.2;
   }
-  h1 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 700; }
-  h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 600; }
-  h3 { font-size: 1.2rem; font-weight: 600; }
-  p  { font-size: 0.97rem; line-height: 1.75; color: var(--charcoal); }
+
+  h1 { 
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    }
+
+  h2 { 
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    font-weight: 600; 
+    }
+
+  h3 { 
+    font-size: 1.2rem;
+    font-weight: 600;
+    }
+
+  p  { 
+    font-size: 0.97rem; 
+    line-height: 1.75; 
+    color: var(--charcoal); 
+    }
   
-  a { color: var(--royal-purple); text-decoration: none; transition: color .2s; }
-  a:hover { color: var(--deep-plum); }
+  a { 
+    color: var(--royal-purple);
+     text-decoration: none; 
+     transition: color .2s; 
+    }
+
+  a:hover {
+     color: var(--deep-plum);
+    }
   
-  /* utility */
-  .container   { max-width: 1160px; margin: 0 auto; padding: 0 5%; }
-  .text-center { text-align: center; }
-  .sr-only     { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+  .container {
+     max-width: 1160px; 
+     margin: 0 auto; 
+     padding: 0 5%;
+     }
+
+  .text-center {
+     text-align: center;
+     }
+
+  .sr-only  { 
+    position: absolute; 
+    width: 1px; 
+    height: 1px; 
+    overflow: hidden; 
+    clip: rect(0,0,0,0); 
+    }
   
   .divider {
     width: 60px; height: 3px;
@@ -51,8 +85,7 @@
     border-radius: 2px;
   }
   .divider-left { margin-left: 0; }
-  
-  /* layout helpers */
+
   .two-col {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -70,8 +103,7 @@
     .two-col   { grid-template-columns: 1fr; gap: 32px; }
     .three-col { grid-template-columns: 1fr; }
   }
-  
-  /* buttons */
+
   .btn {
     display: inline-block;
     padding: 11px 28px;
@@ -116,7 +148,6 @@
     color: #fff;
   }
   
-  /* shared card style used on multiple pages */
   .card {
     background: #fff;
     border-radius: 14px;
@@ -136,7 +167,6 @@
     margin-top: 40px;
   }
   
-  /* highlight box - the purple left-border callout */
   .highlight-box {
     background: linear-gradient(135deg, var(--light-lilac), #efe8f9);
     border-left: 4px solid var(--royal-purple);
@@ -146,7 +176,6 @@
   }
   .highlight-box p { color: var(--charcoal); }
   
-  /* stat boxes - used on about page */
   .stat-box {
     background: var(--light-lilac);
     border: 1px solid rgba(205,183,233,.4);
@@ -178,7 +207,6 @@
     text-transform: uppercase;
   }
   
-  /* scroll reveal animation - used across pages */
   .reveal {
     opacity: 0;
     transform: translateY(30px);
@@ -193,10 +221,7 @@
   .reveal.delay-3 { transition-delay: 0.3s; }
   
   
-  /* =====================
-     NAV
-     ===================== */
-  
+
   .site-nav {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -245,7 +270,6 @@
     background: rgba(255,255,255,.08);
   }
   
-  /* primary links - visible on desktop */
   .nav-links {
     display: flex;
     align-items: center;
@@ -269,7 +293,6 @@
     background: rgba(255,255,255,.12);
   }
   
-  /* "get involved" pill */
   .nav-links .nav-cta a,
   .more-dropdown .nav-cta a,
   .nav-mobile-panel .nav-cta a {
@@ -283,7 +306,6 @@
   .more-dropdown .nav-cta a:hover,
   .nav-mobile-panel .nav-cta a:hover { background: #c47aa0; }
   
-  /* more dropdown */
   .nav-more { position: relative; list-style: none; }
   
   .nav-more-btn {
@@ -347,7 +369,6 @@
   
   .more-dropdown .nav-cta a { margin: 4px 12px; padding: 7px 16px; display: inline-block; }
   
-  /* hamburger - hidden on desktop */
   .nav-toggle {
     display: none;
     flex-direction: column;
@@ -373,7 +394,6 @@
   .nav-toggle.open span:nth-child(2) { opacity: 0; }
   .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
   
-  /* mobile panel */
   .nav-mobile-panel {
     display: none;
     position: absolute;
@@ -525,10 +545,6 @@
   @media (max-width: 860px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
   @media (max-width: 560px) { .footer-grid { grid-template-columns: 1fr; } }
   
-  
-  
-  
-  /* accordion (faq) */
   .accordion { max-width: 780px; margin: 40px auto 0; }
   .accordion-item {
     background: #fff;
@@ -562,58 +578,3 @@
   }
   .accordion-body.open { max-height: 400px; padding: 0 22px 18px; }
   
-  /* contact form */
-  .contact-form {
-    background: #fff;
-    border-radius: 16px;
-    padding: 40px;
-    max-width: 620px;
-    box-shadow: 0 4px 24px rgba(75,31,95,.1);
-  }
-  .form-group { margin-bottom: 20px; }
-  .form-group label {
-    display: block; margin-bottom: 6px;
-    font-size: 0.88rem; font-weight: 600; color: var(--deep-plum);
-  }
-  .form-group input,
-  .form-group textarea,
-  .form-group select {
-    width: 100%; padding: 11px 14px;
-    border: 1.5px solid rgba(205,183,233,.6);
-    border-radius: 8px;
-    font-family: inherit; font-size: 0.92rem;
-    background: var(--warm-white); color: var(--charcoal);
-    outline: none;
-    transition: border-color .2s, box-shadow .2s;
-  }
-  .form-group input:focus,
-  .form-group textarea:focus,
-  .form-group select:focus {
-    border-color: var(--royal-purple);
-    box-shadow: 0 0 0 3px rgba(109,63,169,.12);
-  }
-  .form-group textarea { resize: vertical; min-height: 120px; }
-  
-  /* gallery */
-  .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 16px; margin-top: 40px;
-  }
-  .gallery-item {
-    border-radius: 12px; overflow: hidden;
-    position: relative; aspect-ratio: 4/3;
-    background: var(--soft-lavender); cursor: pointer;
-  }
-  .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s; }
-  .gallery-item:hover img { transform: scale(1.06); }
-  .gallery-overlay {
-    position: absolute; inset: 0;
-    background: linear-gradient(to top, rgba(75,31,95,.75) 0%, transparent 60%);
-    opacity: 0; transition: opacity .3s;
-    display: flex; align-items: flex-end; padding: 16px;
-  }
-  .gallery-item:hover .gallery-overlay { opacity: 1; }
-  .gallery-overlay h3 { color: #fff; font-size: 1rem; }
-  
-
